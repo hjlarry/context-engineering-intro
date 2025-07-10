@@ -294,3 +294,14 @@ examples/
 
 - [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
 - [Context Engineering Best Practices](https://www.philschmid.de/context-engineering)
+
+
+
+### Total cost
+Total cost:            $5.71
+Total duration (API):  32m 42.3s
+Total duration (wall): 9h 19m 30.1s
+Total code changes:    1652 lines added, 12 lines removed
+Usage by model:
+    claude-3-5-haiku:  334.6k input, 4.3k output, 0 cache read, 0 cache write
+       claude-sonnet:  4.1k input, 62.2k output, 3.4m cache read, 855.4k cache write, 26 web search
