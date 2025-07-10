@@ -1,0 +1,2 @@
+# the dify_plugin contains Flask,Werkzeug,dpkt,gevent,httpx,pydantic_settings,pydantic,pyyaml,requests,socksio,tiktoken,yarl,packaging
+dify_plugin>=0.2.0,<0.3.0
