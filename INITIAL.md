@@ -7,16 +7,13 @@ Use this website to convert mermaid:  https://mermaid.ink/
 
 ## EXAMPLES:
 
-In the `examples/` folder, there is a basic dify plugin template, and I add some comments to explain the dify'API for you. 
+In the `examples/` folder, there is a basic dify plugin template. 
 
-You need to change the code and config in the `examples/your_plugin` folder, and some files don't need to modify.
-
-If this file don't need to modify, I will add a comment on the top line of the file, you just copy it
+You need to change the code and config in the `examples/your_plugin` folder.
 
 This is the plugin structure:
 ```
 your_plugin/
-├── _assets/             # Icons and visual resources
 ├── provider/            # Provider definitions and validation
 │   ├── your_plugin.py   # Credential validation logic
 │   └── your_plugin.yaml # Provider configuration
@@ -27,8 +24,6 @@ your_plugin/
 │   └── feature_two.yaml # Another tool configuration
 ├── utils/               # Helper functions
 │   └── helpers.py       # Common functionality logic
-├── .env.example         # Environment variable template
-├── main.py              # Entry file
 ├── manifest.yaml        # Main plugin configuration
 ├── README.md            # Documentation
 ├── PRIVACY.md           # PRIVACY
