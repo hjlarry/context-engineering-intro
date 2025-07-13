@@ -24,7 +24,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:mermaid.ink)",
       "WebFetch(domain:python.langchain.com)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
