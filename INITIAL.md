@@ -1,9 +1,18 @@
 ## FEATURE:
 
-Implement a plugin of dify platform, which has its own run environment and standard, you need to follow the standard.
+Implement an endpoint plugin of dify platform, which has its own run environment and standard, you need to follow the standard.
 
-This plugin is to build a mermaid converter, the input is user's mermaid code, the output is a jpg/png/pdf etc.
-Use this website to convert mermaid:  https://mermaid.ink/
+This plugin is to run a website in the environment, the running server connect to different popular AI platform, the website can display the delay time of each request.
+
+Must included AI platform: 
+- OpenAI
+- Azure OpenAI
+- Google Gemini
+- deepseek
+
+User also can add its own AI platform
+
+The website should also display its ip information.
 
 ## EXAMPLES:
 
@@ -14,28 +23,20 @@ You need to change the code and config in the `examples/your_plugin` folder.
 This is the plugin structure:
 ```
 your_plugin/
-├── provider/            # Provider definitions and validation
-│   ├── your_plugin.py   # Credential validation logic
-│   └── your_plugin.yaml # Provider configuration
-├── tools/               # Tool implementations
-│   ├── feature_one.py   # Tool functionality implementation
-│   ├── feature_one.yaml # Tool parameters and description
-│   ├── feature_two.py   # Another tool implementation
-│   └── feature_two.yaml # Another tool configuration
-├── utils/               # Helper functions
-│   └── helpers.py       # Common functionality logic
+├── group/            
+│   └── your_extension.yaml  # To config the endpoint required input
+├── endpoints/               
+│   ├── your_extension.py   # The core logic
+│   ├── your_extension.yaml # To config the endpoint path
 ├── manifest.yaml        # Main plugin configuration
-├── README.md            # Documentation
-├── PRIVACY.md           # PRIVACY
+├── README.md            # Documentation, you need to write the document of your plugin. 
+├── PRIVACY.md           # PRIVACY, you need to write the PRIVACY of your plugin.
 └── requirements.txt     # Dependency list
 ```
 
 ## DOCUMENTATION:
 
-mermaid convert: https://mermaid.ink/
-getting started document: https://docs.dify.ai/plugin-dev-zh/0211-getting-started-by-prompt
-invoke the LLM: https://docs.dify.ai/plugin-dev-zh/9242-reverse-invocation-model
-invoke the APP: https://docs.dify.ai/plugin-dev-zh/9242-reverse-invocation-app
+https://docs.dify.ai/plugin-dev-en/9231-extension-plugin
 
 ## OTHER CONSIDERATIONS:
 

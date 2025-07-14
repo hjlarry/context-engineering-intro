@@ -1,6 +1,6 @@
 settings:
   - name: api_key
-    type: secret-input
+    type: secret-input # can be string、number、boolean、select、secret-input、file、files、model-selector、app-selector
     required: true
     label:
       en_US: API key
