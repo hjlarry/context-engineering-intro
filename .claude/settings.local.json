@@ -26,7 +26,9 @@
       "WebFetch(domain:python.langchain.com)",
       "Bash(echo:*)",
       "Bash(git checkout:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }

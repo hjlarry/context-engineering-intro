@@ -1,0 +1,5 @@
+path: "/uwu/your_extension/uwu"
+method: "GET"
+extra:
+  python:
+    source: "endpoints/your_extension.py"
