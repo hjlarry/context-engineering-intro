@@ -1,17 +1,17 @@
 version: 0.0.1
 type: plugin
-author: hjlarry
-name: your_extension
+author: AI Assistant
+name: ai_latency_monitor
 label:
-  en_US: your_extension
-  ja_JP: your_extension
-  zh_Hans: your_extension
-  pt_BR: your_extension
+  en_US: AI Latency Monitor
+  ja_JP: AI Latency Monitor
+  zh_Hans: AI延迟监控器
+  pt_BR: Monitor de Latência de IA
 description:
-  en_US: your extension description
-  ja_JP: your extension description
-  zh_Hans: your extension description
-  pt_BR: your extension description
+  en_US: Monitor real-time latency for popular AI platforms including OpenAI, Azure OpenAI, Google Gemini, and DeepSeek
+  ja_JP: OpenAI、Azure OpenAI、Google Gemini、DeepSeekなど人気のAIプラットフォームのリアルタイム遅延を監視
+  zh_Hans: 监控热门AI平台的实时延迟，包括OpenAI、Azure OpenAI、Google Gemini和DeepSeek
+  pt_BR: Monitore a latência em tempo real para plataformas de IA populares, incluindo OpenAI, Azure OpenAI, Google Gemini e DeepSeek
 icon: icon.svg
 resource:
   memory: 268435456
@@ -20,7 +20,7 @@ resource:
       enabled: true
 plugins:
   endpoints:
-    - group/your_extension.yaml
+    - group/ai_monitor.yaml
 meta:
   version: 0.0.1
   arch:

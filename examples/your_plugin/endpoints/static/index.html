@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Latency Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 AI Platform Latency Monitor</h1>
+            <p>Real-time monitoring of AI platform response times</p>
+        </header>
+
+        <section class="status-section">
+            <div class="status-card">
+                <h3>📍 Server Information</h3>
+                <div id="ip-info" class="info-grid">
+                    <div class="loading">Loading IP information...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="platforms-section">
+            <h2>AI Platform Response Times</h2>
+            <div class="platforms-grid">
+                <div class="platform-card" id="openai-card">
+                    <div class="platform-header">
+                        <h3>OpenAI</h3>
+                        <div class="status-indicator" id="openai-status"></div>
+                    </div>
+                    <div class="latency-display">
+                        <span class="latency-value" id="openai-latency">-</span>
+                        <span class="latency-unit">ms</span>
+                    </div>
+                    <div class="platform-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Last Update:</span>
+                            <span class="detail-value" id="openai-timestamp">Never</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value" id="openai-error">Not configured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-card" id="azure-card">
+                    <div class="platform-header">
+                        <h3>Azure OpenAI</h3>
+                        <div class="status-indicator" id="azure-status"></div>
+                    </div>
+                    <div class="latency-display">
+                        <span class="latency-value" id="azure-latency">-</span>
+                        <span class="latency-unit">ms</span>
+                    </div>
+                    <div class="platform-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Last Update:</span>
+                            <span class="detail-value" id="azure-timestamp">Never</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value" id="azure-error">Not configured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-card" id="gemini-card">
+                    <div class="platform-header">
+                        <h3>Google Gemini</h3>
+                        <div class="status-indicator" id="gemini-status"></div>
+                    </div>
+                    <div class="latency-display">
+                        <span class="latency-value" id="gemini-latency">-</span>
+                        <span class="latency-unit">ms</span>
+                    </div>
+                    <div class="platform-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Last Update:</span>
+                            <span class="detail-value" id="gemini-timestamp">Never</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value" id="gemini-error">Not configured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-card" id="deepseek-card">
+                    <div class="platform-header">
+                        <h3>DeepSeek</h3>
+                        <div class="status-indicator" id="deepseek-status"></div>
+                    </div>
+                    <div class="latency-display">
+                        <span class="latency-value" id="deepseek-latency">-</span>
+                        <span class="latency-unit">ms</span>
+                    </div>
+                    <div class="platform-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Last Update:</span>
+                            <span class="detail-value" id="deepseek-timestamp">Never</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value" id="deepseek-error">Not configured</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Latency History</h2>
+            <div class="chart-container">
+                <canvas id="latencyChart"></canvas>
+            </div>
+        </section>
+
+        <section class="controls-section">
+            <div class="controls">
+                <button id="refresh-btn" class="btn btn-primary">🔄 Refresh Now</button>
+                <button id="toggle-auto-refresh" class="btn btn-secondary">⏸️ Pause Auto-refresh</button>
+                <div class="status-info">
+                    <span id="last-update">Never updated</span> | 
+                    <span id="auto-refresh-status">Auto-refresh: ON</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>AI Latency Monitor - Dify Plugin | Last updated: <span id="footer-timestamp">-</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

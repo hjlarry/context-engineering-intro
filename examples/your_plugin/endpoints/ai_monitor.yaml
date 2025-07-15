@@ -1,0 +1,5 @@
+path: "/ai-latency-monitor"
+method: "GET"
+extra:
+  python:
+    source: "endpoints/ai_monitor.py"
